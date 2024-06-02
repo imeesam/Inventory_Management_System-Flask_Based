@@ -2,13 +2,13 @@ from flask import Flask, render_template, request, flash, redirect, url_for
 import mysql.connector
 
 app = Flask(__name__)
-app.secret_key = '6d9e4e8b9aaf4a3e88b89a3f9a7e4b65' 
+app.secret_key = 'your_secret_key' 
 
 # Establish connection to MySQL
 db = mysql.connector.connect(
-    host=" sql12.freesqldatabase.com",
-    user="sql12709648",
-    password="tjGukNlQ2f"
+    host="your_host_name",
+    user="your_user_name",
+    password="your_password"
 )
 # r.B4-ib6i&9%uLY
 cur = db.cursor()
