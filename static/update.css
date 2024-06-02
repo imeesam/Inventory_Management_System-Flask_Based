@@ -1,0 +1,73 @@
+body {
+  font-family: 'Times New Roman', Times, serif;
+  margin: 0;
+  padding: 0;
+  background-image: url('bg.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #000; /* Adjust color if needed for visibility against background */
+}
+
+form {
+  width: 400px;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #666;
+}
+
+input[type="text"], input[type="number"] {
+  width: 95%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+input[type="text"]:focus, input[type="number"]:focus {
+  border-color: #aaa;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+button[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-bottom: 10px; /* add margin bottom to create space between button and link */
+}
+
+button[type="submit"]:hover {
+  background-color: #3e8e41;
+}
+
+a {
+  text-decoration: none;
+  color: #2196F3;
+  float: inline-end;
+  margin-top: 10px;
+}

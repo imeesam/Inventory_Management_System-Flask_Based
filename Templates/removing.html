@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remove Item</title>
+    <link rel="stylesheet" type="text/css" href="removing.css" />
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='removing.css') }}">
+    <style>
+        :root {
+            --static-url: "{{ url_for('static', filename='removing.css') }}";
+        }
+        .background {
+            background: url('/static/bg.jpg') no-repeat;
+        }
+        </style>
+</head>
+<body>
+    <form action="/removing" method="post">
+        <h2>Remove Item</h2>
+        <div>
+            <label for="itemID">Item ID:</label>
+            <input type="text" id="itemID" name="itemID">
+        </div>
+        <div>
+            <button type="submit">Remove Item</button>
+        </div>
+        <div><a href="/">Dashboard Menu</a></div>
+    </form>
+    {% with messages = get_flashed_messages() %}
+          {% if messages %}
+            <ul class="flashes">
+            {% for message in messages %}
+              <li>{{ message }}</li>
+            {% endfor %}
+            </ul>
+          {% endif %}
+        {% endwith %}
+
+</body>
+</html>

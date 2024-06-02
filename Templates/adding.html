@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adding Data</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='adding.css') }}">
+    <style>
+        :root {
+            --static-url: "{{ url_for('static', filename='adding.css') }}";
+        }
+        .background {
+            background: url('/static/bg.jpg') no-repeat;
+        }
+        </style>
+</head>
+<body>
+    <div class="interface">
+        <h1>Add Data</h1>
+        <form action="/adding" method="post">
+            <div>
+                <label for="itemID">Item ID:</label>
+                <input type="text" id="itemID" name="itemID" required>
+            </div>
+            <div>
+                <label for="itemName">Item Name:</label>
+                <input type="text" id="itemName" name="itemName" required>
+            </div>
+            <div>
+                <label for="quantity">Quantity:</label>
+                <input type="number" id="quantity" name="quantity" required>
+            </div>
+            <div>
+                <label for="price">Price:</label>
+                <input type="number" id="price" name="price" required>
+            </div>
+            <div>
+                <label for="category">Category:</label>
+                <input type="text" id="category" name="category" required>
+            </div>
+            <div>
+                <button type="submit" class="btn">Add</button>
+            </div>
+            <div><a href="/">Dashboard Menu</a></div>
+        </form>
+        {% with messages = get_flashed_messages() %}
+          {% if messages %}
+            <ul class="flashes">
+            {% for message in messages %}
+              <li>{{ message }}</li>
+            {% endfor %}
+            </ul>
+          {% endif %}
+        {% endwith %}
+    </div>
+</body>
+</html>

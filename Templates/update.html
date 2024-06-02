@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Data</title>
+    <link rel="stylesheet" type="text/css" href="update.css" />
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='update.css') }}">
+    <style>
+        :root {
+            --static-url: "{{ url_for('static', filename='update.css') }}";
+        }
+        .background {
+            background: url('/static/bg.jpg') no-repeat;
+        }
+        </style>
+</head>
+<body>
+
+    <form action="/update" method="post">
+        <h2>Update Item</h2>
+        <div>
+            <label for="itemID">Item ID:</label>
+            <input type="text" id="itemID" name="itemID">
+        </div>
+        <div>
+            <label for="itemName">Item Name:</label>
+            <input type="text" id="itemName" name="itemName">
+        </div>
+        <div>
+            <label for="quantity">Quantity:</label>
+            <input type="number" id="quantity" name="quantity">
+        </div>
+        <div>
+            <label for="price">Price:</label>
+            <input type="text" id="price" name="price">
+        </div>
+        <div>
+            <label for="category">Category:</label>
+            <input type="text" id="category" name="category">
+        </div>
+        <div>
+            <button type="submit">Update Item</button>
+        </div>
+        <div><a href="/">Dashboard Menu</a></div>
+    </form>
+    {% with messages = get_flashed_messages() %}
+          {% if messages %}
+            <ul class="flashes">
+            {% for message in messages %}
+              <li>{{ message }}</li>
+            {% endfor %}
+            </ul>
+          {% endif %}
+        {% endwith %}
+
+</body>
+</html>
