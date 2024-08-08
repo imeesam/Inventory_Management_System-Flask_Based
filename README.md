@@ -13,6 +13,9 @@ here’s a step-by-step guide for setting up and running this Flask application 
    - Install Flask and `mysql-connector-python` package. You can use pip to install these:
 
      ```sh
+     pip install flask 
+     ```
+     ```sh
      pip install flask mysql-connector-python
      ```
 
