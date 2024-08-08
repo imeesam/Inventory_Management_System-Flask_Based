@@ -44,6 +44,7 @@ here’s a step-by-step guide for setting up and running this Flask application 
      ```sh
      python app.py
      ```
+     - or manually use run button in `VScode`
 
 **c. Access the Application:**
    - Open a web browser and go to `http://127.0.0.1:5000/` to see your application running.
