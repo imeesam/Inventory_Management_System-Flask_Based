@@ -7,8 +7,8 @@ app.secret_key = '6d9e4e8b9aaf4a3e88b89a3f9a7e4b65'
 # Establish connection to MySQL
 db = mysql.connector.connect(
     host="localhost",
-    user="root",
-    password="Meesam_rizvi69",
+    user="USE_YOUR_USERNAME",
+    password="USE_YOUR_PASSWORD_FOR_DATABASE",
     database="Inventory_Management"  # Select the database here
 )
 cur = db.cursor()
