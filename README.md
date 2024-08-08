@@ -20,7 +20,7 @@ here’s a step-by-step guide for setting up and running this Flask application 
      ```
 
 ### 2. **Set Up MySQL Database**
-**you can setup your MySQL Database by watching any Youtube Tutorial
+**you can setup your MySQL Database by watching any Youtube Tutorial**
 
 ### 3. Download provided folder and python file.
  - make sure to Place your CSS files (e.g., `adding.css`, `update.css`) into the `static` directory and HTML files(e.g., `adding.html`,`update.html`) into the `Templates` directory
