@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Data</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='search.css') }}">
+    <style>
+        :root {
+            --static-url: "{{ url_for('static', filename='search.css') }}";
+        }
+        .background {
+            background: url('/static/bg.jpg') no-repeat;
+        }
+    </style>
+</head>
+<body>
+    <div class="interface">
+        <form action="/search" method="post">
+            <h2>Search Item</h2>
+            <div>
+                <label for="itemID">Item ID:</label>
+                <input type="text" id="itemID" name="itemID">
+            </div>
+            <div>
+                <label for="itemName">Item Name:</label>
+                <input type="text" id="itemName" name="itemName">
+            </div>
+            <div>
+                <label for="category">Category:</label>
+                <input type="text" id="category" name="category">
+            </div>
+            <div>
+                <button type="submit">Search Item</button>
+            </div>
+            <div><a href="/">Dashboard Menu</a></div>
+        </form>
+
+        <!-- Display flash messages -->
+        <ul class="flashes">
+            {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                    {% for message in messages %}
+                        <li>{{ message }}</li>
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}
+        </ul>
+<!-- Display data -->
+<h2>Avalibale Items</h2>
+<table border="1">
+    <tr>
+        <th>Item ID</th>
+        <th>Item Name</th>
+        <th>Quantity</th>
+        <th>Price</th>
+        <th>Category</th>
+    </tr>
+    {% for row in data %}
+    <tr>
+        <td>{{ row[1] }}</td>
+        <td>{{ row[2] }}</td>
+        <td>{{ row[3] }}</td>
+        <td>{{ row[4] }}</td>
+        <td>{{ row[5] }}</td>
+    </tr>
+    {% endfor %}
+</table>
+</div>
+</body>
+</html>
