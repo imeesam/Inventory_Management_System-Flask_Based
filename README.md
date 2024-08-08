@@ -74,4 +74,37 @@ If you encounter any issues:
 - **Inspect HTML/CSS:** Ensure your HTML and CSS are correctly referenced and styled.
 - **Verify Database Connection:** Ensure your MySQL connection details are correct and that the database is accessible.
 
-If you need further assistance or run into specific issues, feel free to ask!
+If you want to view the data in your MySQL database, you can use various methods. Here’s a guide on how to do it:
+
+## Viewing Data in MySQL Database
+
+### 1. Using MySQL Command Line
+
+**a. Access MySQL Command Line:**
+- Open your MySql command line terminal.
+- You will be prompted for your password. Enter your password for MySQL command line tool.
+
+**b. Select Database:**
+- Once logged in, select your database:
+
+  ```sql
+  USE Inventory_Management;
+  ```
+
+**c. View Data in a Table:**
+- To view the data in a specific table (e.g., `Data` table):
+
+  ```sql
+  SELECT * FROM Data;
+  ```
+
+- This will display all rows and columns from the `Data` table.
+
+**d. Exit MySQL Command Line:**
+- To exit the MySQL command line tool:
+
+  ```sql
+  EXIT;
+  ```
+
+
